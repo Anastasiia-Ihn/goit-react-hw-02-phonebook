@@ -1,14 +1,16 @@
+import { List, ListItem } from './ContactList.styled';
+
 export const ContactList = ({ listContacts }) => {
   return (
-    <ul>
+    <List>
       {listContacts.map(({ id, name, number }) => (
-        <li key={id}>
+        <ListItem key={id}>
           <p>{name}</p>
           <p>{number}</p>
-        </li>
+        </ListItem>
       ))}
-    </ul>
+    </List>
   );
 };
 
-// list-style: square;
+//

@@ -1,6 +1,12 @@
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { nanoid } from 'nanoid';
+import {
+  BtnAddContact,
+  ErrorMsg,
+  FieldForm,
+  StyledForm,
+} from './ContactForm.styled';
 
 const builderSchema = Yup.object().shape({
   name: Yup.string()
@@ -27,21 +33,21 @@ export const ContactForm = ({ onAdd }) => {
       onSubmit={onSubmit}
       validationSchema={builderSchema}
     >
-      <Form>
+      <StyledForm>
         <label>
           Name
-          <Field id={nanoid()} name="name" />
-          <ErrorMessage name="name" />
+          <FieldForm id={nanoid()} name="name" />
+          <ErrorMsg component="p" name="name" />
         </label>
 
         <label>
           Number
-          <Field type="number" id={nanoid()} name="number" />
-          <ErrorMessage name="number" />
+          <FieldForm type="number" id={nanoid()} name="number" />
+          <ErrorMsg component="p" name="number" />
         </label>
 
-        <button type="submit">Add contact</button>
-      </Form>
+        <BtnAddContact type="submit">Add contact</BtnAddContact>
+      </StyledForm>
     </Formik>
   );
 };

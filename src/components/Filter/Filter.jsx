@@ -1,10 +1,12 @@
+import { FormInput } from './Filter.styled';
+
 export const Filter = ({ filter, onChange }) => {
   return (
-    <form>
+    <FormInput>
       <label>
         Find contacts by name
         <input type="text" name="input" value={filter} onChange={onChange} />
       </label>
-    </form>
+    </FormInput>
   );
 };
