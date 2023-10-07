@@ -13,7 +13,7 @@ const builderSchema = Yup.object().shape({
     .min(2, 'Too Short!')
     .max(20, 'Too Long!')
     .required('This field is required'),
-  number: Yup.string().min(10, 'Too Short!').required('This field is required'),
+  number: Yup.string().min(7, 'Too Short!').required('This field is required'),
 });
 
 const initialValues = {

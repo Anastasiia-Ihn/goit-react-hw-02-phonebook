@@ -27,6 +27,8 @@ export const BtnAddContact = styled.button`
 
   &:hover,
   &:focus {
+    cursor: pointer;
+
     background-color: #119875;
   }
 `;
