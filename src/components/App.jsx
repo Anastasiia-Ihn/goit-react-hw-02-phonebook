@@ -16,10 +16,10 @@ export class App extends Component {
   };
 
   addContact = newContact => {
-    const aaaa = this.state.contacts.find(contact => {
+    const isElem = this.state.contacts.find(contact => {
       return contact.name === newContact.name;
     });
-    if (aaaa) {
+    if (isElem) {
       alert(`${newContact.name} is already in contacts`);
       return;
     }
