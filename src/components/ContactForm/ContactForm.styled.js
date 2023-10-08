@@ -2,7 +2,9 @@ import { Form, Field, ErrorMessage } from 'formik';
 import styled from 'styled-components';
 
 export const StyledForm = styled(Form)`
-  width: 350px;
+  border: 1px solid #159876;
+  padding: 15px;
+  width: 400px;
   display: flex;
   flex-direction: column;
   gap: 15px;

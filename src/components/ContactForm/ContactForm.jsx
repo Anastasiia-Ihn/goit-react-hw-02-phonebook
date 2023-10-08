@@ -42,7 +42,7 @@ export const ContactForm = ({ onAdd }) => {
 
         <label>
           Number
-          <FieldForm type="number" id={nanoid()} name="number" />
+          <FieldForm type="tel" id={nanoid()} name="number" />
           <ErrorMsg component="p" name="number" />
         </label>
 

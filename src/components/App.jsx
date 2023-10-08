@@ -16,24 +16,19 @@ export class App extends Component {
   };
 
   addContact = newContact => {
+    const aaaa = this.state.contacts.find(contact => {
+      return contact.name === newContact.name;
+    });
+    if (aaaa) {
+      alert(`${newContact.name} is already in contacts`);
+      return;
+    }
+
     this.setState(prevState => {
-      console.log(prevState.contacts);
-      console.log(newContact.name);
-      prevState.contacts.map(contact => {
-        return (
-          contact.name.includes(newContact.name) &&
-          alert(`${newContact.name} is already in contacts`)
-        );
-        // contact.number.includes(newContact.number)
-      });
       return {
         contacts: [...prevState.contacts, { ...newContact, id: nanoid() }],
       };
     });
-
-    // if (prevState.contacts.includes(newContact.name)) {
-    //   return alert(`${newContact.name} is already in contacts`);
-    // }
   };
 
   deleteContact = idContact => {
